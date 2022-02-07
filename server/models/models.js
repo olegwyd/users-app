@@ -15,7 +15,13 @@ const Profile = sequelize.define('profiles', {
   city: { type: DataTypes.STRING },
 });
 
+const Role = sequelize.define('profiles', {
+  id: { type: DataTypes.INTEGER, primaryKey: true },
+  name: { type: DataTypes.STRING },
+});
+
 module.exports = {
   User,
   Profile,
+  Role,
 };
