@@ -9,17 +9,17 @@ const SignIn = () => {
         <label htmlFor="email" className="form__label">
           Email
         </label>
-        <input type="email" className="form__input" id="email" />
+        <input type="email" className="form__input" />
 
         <label htmlFor="password" className="form__label">
           Password
         </label>
-        <input type="password" className="form__input" id="password" />
+        <input type="password" className="form__input" />
 
-        <input type="button" value="Sign In" className="form__button" />
+        <input type="submit" value="Sign In" className="form__button" />
 
         <Link to="/">
-          <span className="sign-in-button">To Sign Up</span>
+          <span className="sign-in-button">Sign Up</span>
         </Link>
       </form>
     </div>

@@ -29,7 +29,34 @@ class UserController {
     }
   }
 
-  async editUser(req, res) {}
+  async editUser(req, res) {
+    try {
+      const { userId } = req.params;
+
+      const user = await User.findOne({
+        where: {
+          id: userId,
+        },
+      });
+
+      user.set({
+        username: req.body.username,
+        email: req.body.email,
+      });
+
+      await user.save();
+
+      const newUser = await User.findOne({
+        where: {
+          id: userId,
+        },
+      });
+
+      res.status(200).send(newUser);
+    } catch (error) {
+      res.status(404).send({ message: error.message });
+    }
+  }
 
   async deleteUser(req, res) {
     try {

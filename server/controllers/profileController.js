@@ -1,4 +1,4 @@
-const { User, Profile, Role } = require('../models/models');
+const { User, Profile } = require('../models/models');
 
 class ProfileController {
   async addProfile(req, res) {

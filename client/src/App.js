@@ -1,16 +1,10 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
+import AppRouter from './components/AppRouter';
 
 const App = () => {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<SignUp />} exact />
-        <Route path="/signIn" element={<SignIn />} exact />
-      </Routes>
+      <AppRouter />
     </div>
   );
 };
